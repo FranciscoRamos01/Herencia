@@ -1,0 +1,24 @@
+class vehiculo:
+    def __init__(self,fecha_fabricacion, VIN_chasis, VINMotor):
+        self.fecha_fabricacion=fecha_fabricacion
+        self.VIN_chasis=VIN_chasis
+        self.VINMotor=VINMotor
+    
+    def imprimirDatos(self):
+        print("LA FECHA DE FABRICACIÓN ES: ",self.fecha_fabricacion,"\nEL VIN CHASIS ES: ",self.VIN_chasis,"\nEL VIN MOTOR ES: ",self.VINMotor)    
+
+
+
+class automovil(vehiculo):
+    def __init__(self,fecha_fabricacion, VIN_chasis, VINMotor,marca,modelo,precio):
+        self.marca=marca
+        self.modelo=modelo
+        self.precio=precio
+        vehiculo.__init__(self,fecha_fabricacion, VIN_chasis, VINMotor)
+    def imprimir2datos(self):
+        print("\nLA MARCA DEL VEHICULO ES: ",self.marca,"\nEL MODELO ES: ",self.modelo,"\nEL PRECIO DEL VEHICULO ES: ",self.precio)
+        
+        
+x=automovil("2025/08/16","JFDSJG44R5777","KJFBHWRBFJH54534","MAZDA","MAZDA 3 NAGISA |2025|",120000000)  
+x.imprimirDatos() 
+x.imprimir2datos()   
